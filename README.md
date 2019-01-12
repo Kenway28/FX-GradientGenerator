@@ -1,4 +1,4 @@
 # FX-GradientGenerator
-this tool help you to generate css code for linear-gradient in java fx
+this tool help you to generate css code for Material Design linear-gradient in java fx
 
-Requires Java 8.191
+for Java 8.191 and above
