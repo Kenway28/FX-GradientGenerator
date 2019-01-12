@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="750.0" style="-fx-background-color: #F3F3F3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx_gradient_generator.FXGradientController">
+    <children>
+        <HBox fx:id="Preview" layoutX="260.0" layoutY="80.0" prefHeight="300.0" prefWidth="470.0" style="-fx-border-color: #F8F8F8;" />
+        <JFXColorPicker fx:id="StartColor" layoutX="152.0" layoutY="80.0" onAction="#ApplyStartColor" prefHeight="50.0" prefWidth="70.0" promptText=" " />
+        <JFXColorPicker fx:id="FinishColor" layoutX="152.0" layoutY="150.0" onAction="#ApplyFinishColor" prefHeight="50.0" prefWidth="70.0" />
+        <Group layoutX="89.0" layoutY="352.0" />
+      <VBox layoutX="30.0" layoutY="230.0" prefHeight="155.0" prefWidth="170.0" spacing="8.0">
+         <children>
+            <Label prefHeight="44.0" prefWidth="170.0" text="Gradient Orientation" underline="true">
+               <font>
+                  <Font name="Segoe UI Semibold" size="17.0" />
+               </font>
+            </Label>
+              <JFXRadioButton fx:id="rdTop" onAction="#StartFromTop" prefHeight="30.0" prefWidth="170.0" selected="true" text="Top To Bottom">
+                  <font>
+                      <Font name="Segoe UI Semibold" size="17.0" />
+                  </font>
+              </JFXRadioButton>
+              <JFXRadioButton fx:id="rdBottom" onAction="#StartFromBottom" prefHeight="30.0" prefWidth="170.0" text="Bottom To Top">
+                  <font>
+                      <Font name="Segoe UI Semibold" size="17.0" />
+                  </font>
+              </JFXRadioButton>
+            <JFXRadioButton fx:id="rdRight" onAction="#StartFromRight" prefHeight="30.0" prefWidth="170.0" text="Right To Left">
+               <font>
+                  <Font name="Segoe UI Semibold" size="17.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rdLeft" onAction="#StartFromLeft" prefHeight="30.0" prefWidth="170.0" text="Left To Right">
+               <font>
+                  <Font name="Segoe UI Semibold" size="17.0" />
+               </font>
+            </JFXRadioButton>
+         </children>
+      </VBox>
+        <Label layoutX="30.0" layoutY="80.0" prefHeight="50.0" prefWidth="84.0" text="First Color">
+            <font>
+                <Font name="Segoe UI Semibold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="30.0" layoutY="150.0" prefHeight="50.0" prefWidth="109.0" text="Second Color">
+            <font>
+                <Font name="Segoe UI Semibold" size="17.0" />
+            </font>
+        </Label>
+      <TextArea fx:id="CodePreview" layoutX="260.0" layoutY="410.0" prefHeight="55.0" prefWidth="470.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="17.0" />
+         </font>
+      </TextArea>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="750.0" style="-fx-background-color: #039be5;">
+         <children>
+            <Label prefHeight="50.0" prefWidth="670.0" text="Linear-Gradient Generator" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#Shutdown" prefHeight="44.0" prefWidth="58.0" style="-fx-background-color: #039be5;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+    </children>
+</AnchorPane>
